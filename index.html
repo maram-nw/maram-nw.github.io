@@ -85,6 +85,11 @@ section{scroll-margin-top:70px}
 .photos.one img{max-height:460px;width:auto;max-width:100%}
 .photos.one.narrow img{max-height:520px}
 .photos.two.even{grid-template-columns:1fr 1fr}
+.photos.one.full img{width:100%;max-height:none;height:auto}
+.photos.duo{grid-template-columns:1fr 1fr}
+.photos.duo img{height:260px}
+.photos.three{grid-template-columns:repeat(3,1fr)}
+.photos.three img{height:320px}
 
 blockquote{margin:30px 0 4px;padding:0 0 0 22px;border-left:2px solid var(--accent)}
 blockquote p{font:italic 400 24px/1.4 var(--serif)!important;color:var(--ink)!important;margin:0 0 8px!important}
@@ -140,7 +145,10 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--ink-3)}
 @media (max-width:560px){
   .w{padding:0 16px}
   .lead{font-size:20px}
-  .photos.two,.photos.wide{grid-template-columns:1fr}
+  .photos.two,.photos.wide,.photos.duo{grid-template-columns:1fr}
+  .photos.three{grid-template-columns:1fr 1fr}
+  .photos.three img{height:220px}
+  .photos.duo img{height:auto}
   .photos.two img,.photos.wide img{height:auto!important;max-height:420px}
   .tools{grid-template-columns:1fr;gap:2px}
   .tools dd{margin-bottom:10px}
@@ -219,8 +227,16 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--ink-3)}
           <div class="arrow">→</div>
           <div><b>&lt; 20 min</b><span data-l="en">one person, with the app</span><span data-l="fr">une personne, avec l'appli</span></div>
         </div>
-        <p class="small" data-l="en">Also: a VSM workshop on a high-runner product (Gemba walk, VSM, VSD, VSD2, ABC matrix), the plant's 5S Lean dashboard rebuilt in Python, and L2L, PLM and AutoCAD learned on the job. No photos here, the plant's data is confidential.</p>
-        <p class="small" data-l="fr">Aussi : un atelier VSM sur un produit high-runner (Gemba walk, VSM, VSD, VSD2, matrice ABC), le tableau de bord Lean 5S de l'usine refait en Python, et L2L, PLM et AutoCAD appris sur place. Pas de photos ici, les données de l'usine sont confidentielles.</p>
+        <p data-l="en">The best part was a 4-day VSM/VSD workshop on a high-runner product, with more than 20 people from 6 departments (APS, Industrial Engineering, Logistics, Finance, Operations, Quality). My group prepared the VS Matrix for the whole plant. Then we walked the line, mapped today's flow on one big wall, and drew tomorrow's.</p>
+        <p data-l="fr">Le meilleur moment : un atelier VSM/VSD de 4 jours sur un produit high-runner, avec plus de 20 personnes de 6 services (APS, Industrialisation, Logistique, Finance, Opérations, Qualité). Mon groupe a préparé la VS Matrix de toute l'usine. Ensuite on a fait le Gemba walk, dessiné le flux actuel sur un grand mur, puis le flux de demain.</p>
+        <div class="photos one full"><figure><img src="img/autoliv_me.jpg" alt="Maram placing sticky notes on the VSM wall at Autoliv" loading="lazy"><figcaption data-l="en">Me at the VSM wall. Every sticky note is a station, a problem or an idea.</figcaption><figcaption data-l="fr">Devant le mur VSM. Chaque post-it est un poste, un problème ou une idée.</figcaption></figure></div>
+        <div class="photos one full"><figure><img src="img/autoliv_wall.jpg" alt="The full VSM wall with the product flow" loading="lazy"><figcaption data-l="en">The whole flow of one product, from receiving to shipping.</figcaption><figcaption data-l="fr">Le flux complet d'un produit, de la réception à l'expédition.</figcaption></figure></div>
+        <div class="photos duo">
+          <figure><img src="img/autoliv_team.jpg" alt="The workshop team in front of the wall" loading="lazy"><figcaption data-l="en">Six departments around the same wall.</figcaption><figcaption data-l="fr">Six services devant le même mur.</figcaption></figure>
+          <figure><img src="img/autoliv_room.jpg" alt="The workshop room at Autoliv El Fahs" loading="lazy"><figcaption data-l="en">The workshop room.</figcaption><figcaption data-l="fr">La salle de l'atelier.</figcaption></figure>
+        </div>
+        <p class="small" data-l="en">Also: the plant's 5S Lean dashboard rebuilt in Python, and L2L, PLM and AutoCAD learned on the job.</p>
+        <p class="small" data-l="fr">Aussi : le tableau de bord Lean 5S de l'usine refait en Python, et L2L, PLM et AutoCAD appris sur place.</p>
       </div>
     </article>
 
@@ -270,9 +286,10 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--ink-3)}
         <h3 data-l="fr">Stage en maintenance aéronautique</h3>
         <p data-l="en">A month in the hangars: quality control and maintenance of hydraulic and pneumatic systems, and time in engine maintenance, calibration, brakes and wheels, structure and painting. The best moment was a ground engine run test on an Airbus A319, after the team fixed a VSV motor issue.</p>
         <p data-l="fr">Un mois dans les hangars : contrôle qualité et maintenance des systèmes hydrauliques et pneumatiques, et des passages en maintenance moteur, étalonnage, freins et roues, structure et peinture. Le meilleur moment : un essai moteur au sol sur un Airbus A319, après la réparation d'un moteur VSV par l'équipe.</p>
-        <div class="photos two even">
+        <div class="photos three">
           <figure><img src="img/a319.jpg" alt="An Airbus A319 in the Tunisair Technics hangar" loading="lazy"><figcaption data-l="en">An A319 in the hangar.</figcaption><figcaption data-l="fr">Un A319 dans le hangar.</figcaption></figure>
           <figure><img src="img/cockpit.jpg" alt="Cockpit during the ground engine run test" loading="lazy"><figcaption data-l="en">In the cockpit for the engine run test.</figcaption><figcaption data-l="fr">Dans le cockpit pour l'essai moteur.</figcaption></figure>
+          <figure><img src="img/ecam.jpg" alt="Engine parameters on the cockpit screens during the ground run" loading="lazy"><figcaption data-l="en">Engine parameters during the run.</figcaption><figcaption data-l="fr">Les paramètres moteur pendant l'essai.</figcaption></figure>
         </div>
       </div>
     </article>
@@ -291,12 +308,19 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--ink-3)}
 
     <!-- Lacroix -->
     <article class="entry">
-      <div class="when"><span>Jul - Aug 2024</span><span class="where">Lacroix Electronics</span></div>
+      <div class="when"><span>Jul - Aug 2024</span><span class="where">Lacroix, Zriba (Zaghouan)</span></div>
       <div class="body">
         <h3 data-l="en">My first industrial internship</h3>
         <h3 data-l="fr">Mon premier stage en usine</h3>
-        <p data-l="en">Siemens PLCs in TIA Portal, Ladder logic for production sequences, Profinet and Modbus. I also helped find why a robot arm kept failing: we traced it, step by step, to a sensor sending wrong signals to the PLC.</p>
-        <p data-l="fr">Automates Siemens sous TIA Portal, logique Ladder pour des séquences de production, Profinet et Modbus. J'ai aussi aidé à trouver pourquoi un bras robot tombait en panne : nous avons remonté, étape par étape, jusqu'à un capteur qui envoyait de mauvais signaux à l'automate.</p>
+        <p data-l="en">Lacroix makes electronic boards. I followed the PCB production steps, the machines on the line and the tests that check each board, and learned the QRQC method the teams use every day to react fast to quality problems.</p>
+        <p data-l="fr">Lacroix fabrique des cartes électroniques. J'ai suivi les étapes de production des PCB, les machines de la ligne et les tests qui valident chaque carte, et j'ai découvert la méthode QRQC que les équipes utilisent chaque jour pour réagir vite aux problèmes qualité.</p>
+        <p data-l="en">On the automation side: Siemens PLCs in TIA Portal, Ladder logic for production sequences, Profinet and Modbus. I also helped find why a robot arm kept failing: we traced it, step by step, to a sensor sending wrong signals to the PLC.</p>
+        <p data-l="fr">Côté automatisme : automates Siemens sous TIA Portal, logique Ladder pour des séquences de production, Profinet et Modbus. J'ai aussi aidé à trouver pourquoi un bras robot tombait en panne : nous avons remonté, étape par étape, jusqu'à un capteur qui envoyait de mauvais signaux à l'automate.</p>
+        <div class="photos three">
+          <figure><img src="img/lacroix_machine.jpg" alt="An automated test station on the Lacroix line" loading="lazy"><figcaption data-l="en">A test station on the line.</figcaption><figcaption data-l="fr">Un poste de test sur la ligne.</figcaption></figure>
+          <figure><img src="img/lacroix_qrqc.jpg" alt="QRQC daily tasks board" loading="lazy"><figcaption data-l="en">The QRQC board, updated every day.</figcaption><figcaption data-l="fr">Le tableau QRQC, mis à jour chaque jour.</figcaption></figure>
+          <figure><img src="img/lacroix_coat.jpg" alt="Lacroix ESD coat" loading="lazy"><figcaption data-l="en">My ESD coat for the production area.</figcaption><figcaption data-l="fr">Ma blouse antistatique pour la zone de production.</figcaption></figure>
+        </div>
       </div>
     </article>
   </section>
@@ -350,7 +374,7 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--ink-3)}
   </section>
 </main>
 
-<footer class="w foot"><span>Maram Nouiguez, Tunis</span><span data-l="en">Photos are mine or from my LinkedIn posts.</span><span data-l="fr">Les photos sont les miennes ou viennent de mes posts LinkedIn.</span></footer>
+<footer class="w foot"><span>Maram Nouiguez, Tunis</span><span data-l="en">All photos are mine, from my LinkedIn posts.</span><span data-l="fr">Toutes les photos sont les miennes, tirées de mes posts LinkedIn.</span></footer>
 <div class="toast" id="toast" role="status" hidden></div>
 <script>
 (function(){
